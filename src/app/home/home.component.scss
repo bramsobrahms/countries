@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.map {
+  display: grid;
+  grid-template-areas:
+        "north-america europe asia"
+        "south-america africa oceania";
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.continent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+#north-america {
+  grid-area: north-america;
+  background-color: #3498db;
+}
+
+#south-america {
+  grid-area: south-america;
+  background-color: #e74c3c;
+}
+
+#europe {
+  grid-area: europe;
+  background-color: #9b59b6;
+}
+
+#africa {
+  grid-area: africa;
+  background-color: #f1c40f;
+}
+
+#asia {
+  grid-area: asia;
+  background-color: #2ecc71;
+}
+
+#oceania {
+  grid-area: oceania;
+  background-color: #e67e22;
+}
