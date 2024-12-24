@@ -7,6 +7,9 @@
     min-height: 10%;
     background-color: black;
     padding: 15px;
+    display: flex;
+    align-items: center;  // Centre verticalement
+    justify-content: center;  // Centre horizontalement
   }
 
   main {
