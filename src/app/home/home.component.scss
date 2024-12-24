@@ -31,30 +31,31 @@ body {
 
 #north-america {
   grid-area: north-america;
-  background-color: #3498db;
+  background-color: orange;
 }
 
 #south-america {
   grid-area: south-america;
-  background-color: #e74c3c;
+  background-color: blue;
 }
 
 #europe {
   grid-area: europe;
-  background-color: #9b59b6;
+  background-color: red;
 }
 
 #africa {
   grid-area: africa;
-  background-color: #f1c40f;
+  background-color: green;
 }
 
 #asia {
   grid-area: asia;
-  background-color: #2ecc71;
+  background-color: yellow;
+  color: black;
 }
 
 #oceania {
   grid-area: oceania;
-  background-color: #e67e22;
+  background-color: brown;
 }
