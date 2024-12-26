@@ -1,0 +1,50 @@
+.map {
+  display: grid;
+  grid-template-areas:
+        "north-america europe asia"
+        "south-america africa oceania";
+  gap: 30px;
+  padding: 25px;
+  background-color: #ffffff;
+}
+
+.continent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+#north-america {
+  grid-area: north-america;
+  background-color: orange;
+}
+
+#south-america {
+  grid-area: south-america;
+  background-color: blue;
+}
+
+#europe {
+  grid-area: europe;
+  background-color: red;
+}
+
+#africa {
+  grid-area: africa;
+  background-color: green;
+}
+
+#asia {
+  grid-area: asia;
+  background-color: yellow;
+  color: black;
+}
+
+#oceania {
+  grid-area: oceania;
+  background-color: brown;
+}

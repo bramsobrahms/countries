@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  align-items: center;  // Centre verticalement
+  justify-content: center;  // Centre horizontalement
+  height: 15%;  // Prend 20% de la hauteur de la vue
+}
+
+main {
+  flex: 1;  // Occupe tout l'espace disponible entre le header et le footer
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10%;  // Prend 10% de la hauteur de la vue
+}
