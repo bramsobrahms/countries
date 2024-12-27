@@ -13,7 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './countries-continent.component.scss'
 })
 export class CountriesContinentComponent {
-  data: ContinentModel | undefined;
+  dataCountries: ContinentModel[] = [];
 
   constructor(
     private countriesSrv: CountriesService,
@@ -23,9 +23,9 @@ export class CountriesContinentComponent {
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
       const name = params.get('name') || '';
-      this.countriesSrv.getCountryFromContinent(name).subscribe((results : ContinentModel) => {
-        this.data = results;
-        console.log(this.data);
+      this.countriesSrv.getCountryFromContinent(name).subscribe((results : ContinentModel[]) => {
+        this.dataCountries = results;
+        console.log(this.dataCountries);
       })
     })
   }
