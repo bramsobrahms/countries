@@ -11,6 +11,6 @@ export class CountriesService {
   constructor(private _http: HttpClient) { }
 
   getCountryFromContinent(name: string): Observable<ContinentModel>{
-    return this._http.get<ContinentModel>(`https://restcountries.com/v3.1/subregion/${name}`)
+    return this._http.get<ContinentModel>(`https://restcountries.com/v3.1/region/${name}`)
   }
 }

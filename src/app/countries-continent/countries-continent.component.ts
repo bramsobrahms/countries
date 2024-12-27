@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {ContinentModel} from '../models/continent.model';
 import {CountriesService} from '../services/countries.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-countries-continent',
@@ -12,18 +13,19 @@ import {CountriesService} from '../services/countries.service';
 export class CountriesContinentComponent {
   data: ContinentModel | undefined;
 
-  constructor(private countriesSrv: CountriesService) { }
+  constructor(
+    private countriesSrv: CountriesService,
+    private activatedRoute: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
-    this.getCountries();
-  }
-
-
-  getCountries() {
-    const continentName = 'North America';
-    this.countriesSrv.getCountryFromContinent(continentName).subscribe((res:any) =>{
-      this.data = res;
-      console.log(this.data);
+    this.activatedRoute.paramMap.subscribe(params => {
+      const name = params.get('name') || '';
+      this.countriesSrv.getCountryFromContinent(name).subscribe((results : ContinentModel) => {
+        this.data = results;
+        console.log(this.data);
+      })
     })
   }
+
 }
