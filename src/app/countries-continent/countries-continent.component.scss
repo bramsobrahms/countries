@@ -1,0 +1,17 @@
+body{
+  align-items: center;
+  width: 900%;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); // Crée cinq colonnes de largeur égale
+}
+
+.example-card {
+  border: 1px dashed gray;
+  max-width: 35vh;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
