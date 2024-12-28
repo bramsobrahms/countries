@@ -7,6 +7,17 @@
     </mat-card-header>
     <img mat-card-image src={{country.flags.png}} alt=image:{{country.name.common}}>
 
+    <mat-card-content>
+      @if (selectedCountry === country && country.borders) {
+          <p> pays voisins: {{country.borders}}</p>
+      } @else if (selectedCountry === country && country.borders == null) {
+        <p> Ce pays n'a pas de pays voisin</p>
+      }
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="showContent(country)">Information</button>
+    </mat-card-actions>
   </mat-card>
 }
 </div>
