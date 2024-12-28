@@ -1,20 +1,17 @@
-body{
-  align-items: center;
-  width: 900%;
-}
-
-.container{
+.container {
   display: grid;
   grid-template-columns: repeat(5, 1fr); // Crée cinq colonnes de largeur égale
+  max-height: 100%;  // S'assure que le container ne dépasse pas la hauteur de main
+  overflow-y: auto;  // Ajoute un défilement vertical si nécessaire
+  width: 100%;
+  justify-items: center;  // Centre les éléments dans les colonnes
 }
 
 .example-card {
+  background-color: white;
   border: 1px dashed gray;
   max-width: 35vh;
   margin-top: 15px;
   margin-left: 15px;
-}
-
-button {
-  color:deeppink;
+  box-sizing: border-box;
 }
